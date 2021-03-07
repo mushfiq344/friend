@@ -1,7 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
-
+require_relative '../app/middleware/my_middleware'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -18,5 +18,6 @@ module Friend
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.middleware.use MyMiddleware
   end
 end
