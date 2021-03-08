@@ -7,14 +7,15 @@ class MyMiddleware
   end
 
   def call(env)
-    @req = Rack::Request.new(env)
+    # @req = Rack::Request.new(env)
 
     
-      if(@req.path=="/path1/1")
-        @app.call(env)
-      else
-      [404, {}, ["not found"]]  
-      end
+    #   if(@req.path=="/path1/1")
+    #     @app.call(env)
+    #   else
+    #   [404, {}, ["not found"]]  
+    #   end
+    @app.call(env)
   end
 
 
