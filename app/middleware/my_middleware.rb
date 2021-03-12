@@ -8,12 +8,14 @@ class MyMiddleware
 
   def call(env)
     # @req = Rack::Request.new(env)
-
+    puts("checking authentication")
+   
     
     #   if(@req.path=="/path1/1")
     #     @app.call(env)
     #   else
-    #   [404, {}, ["not found"]]  
+    # status code, header, response
+    #   [404, {}, ["not found"]]   
     #   end
     @app.call(env)
   end

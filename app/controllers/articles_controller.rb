@@ -1,5 +1,5 @@
-class ArticlesController < ApplicationController
-    before_action :authenticate_user!
+class ArticlesController < AdminRouteController
+    
     def index
         puts('hello from log')
         # @category=Category.new(title:"cat2")

@@ -1,0 +1,2 @@
+class AdminRegCompCheckController < ApplicationController
+end
